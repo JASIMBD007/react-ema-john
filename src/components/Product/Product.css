@@ -32,11 +32,11 @@
   border: none;
   border-radius: 0px 0px 8px 8px;
   position: absolute;
-  /* bottom: 0; */
+  bottom: 0;
   left: 0%;
   right: 0%;
   top: 90.75%;
-  bottom: -0.2%;
+  /* bottom: -0.2%; */
 }
 .btn-cart:hover {
   background-color: orange;
