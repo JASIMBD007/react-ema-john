@@ -1,13 +1,21 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './components/About/About';
 import Header from './components/Header/Header';
-import Shop from './components/Header/Shop/Shop';
+import Inventory from './components/Inventory/Inventory';
+import Orders from './components/Orders/Orders';
+import Shop from './components/Shop/Shop';
 
 function App () {
   return (
     <div>
       <Header></Header>
-      <Shop></Shop>
+      <Routes>
+        <Route path='/shop' element={<Shop />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/inventory' element={<Inventory />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
     </div>
   );
 }
