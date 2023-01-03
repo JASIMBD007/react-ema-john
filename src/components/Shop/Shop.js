@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import useProducts from '../../hooks/useProducts';
 import { addToDb, getStoredCart } from '../../utilities/fakedb'
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
+    const [products, setProducts] = useProducts();//custom hook used
     const [cart, setCart] = useState([]);
 
-    useEffect(() => {
-        // console.log('Product load before fetch', products);
-        fetch('products.json')
-            .then(response => response.json())
-            .then(data => setProducts(data))
-    }, []);
+    // useEffect(() => {
+    // console.log('Product load before fetch', products);
+    //     fetch('products.json')
+    //         .then(response => response.json())
+    //         .then(data => setProducts(data))
+    // }, []);
 
     useEffect(() => {
         // console.log('Local storage first line ');
