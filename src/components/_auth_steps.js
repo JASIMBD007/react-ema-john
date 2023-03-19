@@ -5,6 +5,11 @@
 * 4. Go to authentication
 * 5. Enable email/password authentication
 * 6. Create Login,Sign Up Component,Setup route
+* 7. Attach handler
+* 8. npm install --save react-firebase-hooks
+* 9. useCreateUserWithEmailAndPassword from react firebase hooks
+* 10. If user is created redirect to the expected page
+* 11. useSignInWithEmailAndPassword to login
 */
 
 // do later

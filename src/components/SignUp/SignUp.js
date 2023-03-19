@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './SignUp.css';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../firebase.init';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -20,6 +25,10 @@ const SignUp = () => {
         setConfirmPassword(event.target.value);
     };
 
+    if (user) {
+        navigate('/shop');
+    }
+
     const handleCreateUser = event => {
         event.preventDefault();//to stop page reload after filling up from
 
@@ -28,6 +37,12 @@ const SignUp = () => {
             setError('Your Passwords Did Not Match')
             return;
         }
+
+        if (password.length < 6) {
+            setError('Password Must be 6 Characters or More')
+            return;
+        }
+        createUserWithEmailAndPassword(email, password);
     }
     return (
         <div className='form-container'>
