@@ -8,19 +8,23 @@
   justify-content: center;
   margin: 0 auto;
 }
+
 .input-group {
   margin-bottom: 20px;
 }
+
 .form-title {
   font-size: 35px;
   font-weight: 400;
   color: #2a414f;
 }
+
 .input-group label {
   display: block;
   margin-left: 5px;
   margin-bottom: 5px;
 }
+
 .input-group input {
   width: 415px;
   height: 55px;
@@ -34,11 +38,18 @@
   background: rgba(255, 153, 0, 0.3);
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
+
+.form-submit:hover {
+  background-color: rgba(255, 153, 0, 0.5);
+}
+
 .from-link {
   color: rgba(255, 153, 0, 1);
   text-decoration: none;
 }
+
 .line {
   display: flex;
   flex-direction: row;
@@ -64,6 +75,7 @@
   text-align: center;
   color: rgba(149, 160, 167, 1);
 }
+
 .hr-lines:after {
   content: " ";
   height: 2px;

@@ -4,6 +4,7 @@
 * 3. Create firebase.init.js and import getAuth to export auth
 * 4. Go to authentication
 * 5. Enable email/password authentication
+* 6. Create Login,Sign Up Component,Setup route
 */
 
 // do later
