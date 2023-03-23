@@ -10,10 +10,13 @@
 * 9. useCreateUserWithEmailAndPassword from react firebase hooks
 * 10. If user is created redirect to the expected page
 * 11. useSignInWithEmailAndPassword to login
+* 12. Create protected router RequireAuth
+* 13.
 */
 
 // do later
 /**
+ * Firebase hosting steps
  * hosting steps
  * 1.npm install -g firebase-tools
  * 2.firebase login
